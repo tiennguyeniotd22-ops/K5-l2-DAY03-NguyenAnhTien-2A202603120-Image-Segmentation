@@ -4,7 +4,7 @@
 
 - Mã học viên theo lớp: 2A202603120
 - Ngày / CVAT local: 12/11/2026 / CVAT local (`localhost:8080`)
-- Công cụ đã dùng: CVAT local; YOLO và SAM3 làm gợi ý; Codex hỗ trợ thao tác/kiểm tra (; `scoring/score.py` để tự đánh giá sau khi nhận gold.
+- Công cụ đã dùng: CVAT local; YOLO và SAM3 làm gợi ý; Codex hỗ trợ thao tác/kiểm tra; `scoring/score.py` để tự đánh giá sau khi nhận gold.
 
 Mã học viên là mã lớp cấp; không cần ghi họ tên trong report nếu kênh [LMS](https://aithucchien.vinuni.edu.vn) đã nhận diện bạn. Chỉ ghi công cụ thật sự đã dùng; không có SAM vẫn làm bài bình thường.
 
