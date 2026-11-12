@@ -46,7 +46,12 @@ Chọn một lỗi **có thật** trong bài. Nếu công cụ lỗi khiến b�
 - Quy tắc và hành động sửa: trong CVAT, tôi điều chỉnh mask vegetation/road theo vùng thực nhìn thấy và giữ ranh xe nhỏ tách khỏi road.
 - Sau sửa đã Save và export lại chưa? Đã Save và export lại.
 
-Nếu bạn **đã xem Summary tự đánh giá trên GitHub Actions hoặc tự chạy script**, ghi ngắn một kết quả liên quan lỗi vừa sửa (ví dụ task, metric trước/sau nếu có): Sau khi nhận gold và chạy `scoring/score.py`: `easy_semantic` mIoU 0.991 (20/20), `medium_instance` 0.994 (32/32; trước lần sửa gần nhất 0.624, 16/32), `hard_panoptic` PQ 0.873 (30/30); tổng tự đánh giá ba tier 82/82, chưa gồm 18 điểm checkpoint. Scorecard có `REVIEW_HIGH_AGREEMENT` ở Easy và Medium; đây là tín hiệu để coach kiểm tra reference/provenance, không phải kết luận hay điểm chính thức. Scorecard ba tier tối đa **82**, không phải điểm cuối trên 100. Không tự ghi PASS/top 3/bonus; người phụ trách xác nhận theo tiêu chí lớp. Không đưa file ground truth vào fork.
+Nếu bạn **đã xem Summary tự đánh giá trên GitHub Actions hoặc tự chạy script**, ghi ngắn một kết quả liên quan lỗi vừa sửa (ví dụ task, metric trước/sau nếu có):
+
+- Lần chạy đầu (đã xem gold, trước các sửa CVAT): `easy_semantic` mIoU 0.803 (17.9/20; coverage 95.3%; sidewalk IoU 0.564); `medium_instance` 0.624 (16/32; mean matched IoU 0.778, P@0.5 0.78, R@0.5 0.80, TP 57, FP 16, FN 14; 73 dự đoán so với 71 GT); `hard_panoptic` PQ 0.443 (16.2/30; cần rà person, sidewalk và car). Tổng ba tier 50.1/82, chưa gồm 18 điểm checkpoint.
+- Sau khi sửa trong CVAT và export lại: `easy_semantic` mIoU 0.991 (20/20), `medium_instance` 0.994 (32/32), `hard_panoptic` PQ 0.873 (30/30); tổng tự đánh giá ba tier 82/82. Scorecard có `REVIEW_HIGH_AGREEMENT` ở Easy và Medium; đây là tín hiệu để coach kiểm tra reference/provenance, không phải kết luận hay điểm chính thức.
+
+Các mức điểm trên là tự đánh giá sau khi xem gold, không phải điểm chính thức. Scorecard ba tier tối đa **82**, không phải điểm cuối trên 100. Không tự ghi PASS/top 3/bonus; người phụ trách xác nhận theo tiêu chí lớp. Không đưa file ground truth vào fork.
 
 ## 4. Ba ca chưa chắc hoặc đã cân nhắc
 
