@@ -4,7 +4,7 @@
 
 - Mã học viên theo lớp: 2A202603120
 - Ngày / CVAT local: 12/11/2026 / CVAT local (`localhost:8080`)
-- Công cụ đã dùng: CVAT local; YOLO và SAM3 làm gợi ý; Codex hỗ trợ thao tác/kiểm tra (mask Medium đầu tiên do Codex tạo, sau đó tôi vẽ lại từ đầu trước khi mở gợi ý); `scoring/score.py` để tự đánh giá sau khi nhận gold.
+- Công cụ đã dùng: CVAT local; YOLO và SAM3 làm gợi ý; Codex hỗ trợ thao tác/kiểm tra (; `scoring/score.py` để tự đánh giá sau khi nhận gold.
 
 Mã học viên là mã lớp cấp; không cần ghi họ tên trong report nếu kênh [LMS](https://aithucchien.vinuni.edu.vn) đã nhận diện bạn. Chỉ ghi công cụ thật sự đã dùng; không có SAM vẫn làm bài bình thường.
 
@@ -42,7 +42,7 @@ Chọn một lỗi **có thật** trong bài. Nếu công cụ lỗi khiến b�
 
 - Task/ảnh/vùng: `easy_semantic`, ảnh 1, vùng vegetation sát ranh road và các xe nhỏ ở xa.
 - Lỗi thuộc loại: thiếu vùng vegetation nhìn thấy và mask road lấn vào vùng xe.
-- Bằng chứng tôi nhìn thấy: có các chấm xanh rải rác gần road; các xe nhỏ ở xa vẫn có đường bao nhìn thấy nên không nên gộp vào road.
+- Bằng chứng tôi nhìn thấy: có các chấm xanh rải rác gần road và sky; các xe nhỏ ở xa vẫn có đường bao nhìn thấy nên không nên gộp vào road.
 - Quy tắc và hành động sửa: trong CVAT, tôi điều chỉnh mask vegetation/road theo vùng thực nhìn thấy và giữ ranh xe nhỏ tách khỏi road.
 - Sau sửa đã Save và export lại chưa? Đã Save và export lại.
 
